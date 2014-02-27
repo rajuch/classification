@@ -18,8 +18,17 @@ INSTALL = '{0}install{0}'.format(' ')
 syspath = '/home/raju/Work/classification/data/'
 
 def extractPackagesNames(cmd):
-    out = [i.strip('\'"') for i in cmd.split(INSTALL)[1].split() if not i.startswith('-')]
+    out = [i.strip('\'"\n') for i in cmd.split(INSTALL)[1].split() if not i.startswith('-')]
     return out
+
+def checkWord(word):
+    chList =['\\', '|', '/', ':', ';', '%'] 
+    for ch in chList:
+        if ch in word:
+            return False
+    if word.isdigit():
+        return False
+    return True
 
 def processShell(f, fileName, docId):
     print 'in shell'
@@ -34,7 +43,7 @@ def processShell(f, fileName, docId):
         except:
             continue
     for word in keywords:
-        if not isEmpty(word) and word not in stopwords:
+        if not isEmpty(word) and word not in stopwords and checkWord(word):
             insertCMD(word, index, docId)
             index += 1
 
@@ -59,10 +68,10 @@ def procesPy(f, fileName, docId):
         keywords = re.findall("[\"\'].*?[\"\']", line)
         if len(keywords) != 0:
             for word in keywords:
-                word = word.strip("\"").strip("\'").lower()
+                word = word.strip("\"'").lower()
                 for w in word.split():
-                    w = w.strip(".").strip(":").strip("=").strip('-').strip(',')
-                    if not isEmpty(w) and w not in stopwords:
+                    w = w.strip(".:=-,\"'\n")
+                    if not isEmpty(w) and w not in stopwords and checkWord(word):
                         insertCMD(w, index, docId)
                         index += 1
 
@@ -84,21 +93,24 @@ def read(path):
     i = 1
     for dir_entry in os.listdir(path):
         print dir_entry
-        f = open(path + dir_entry + '/hooks/install', 'r')
-        for line in f:
-            if 'python' in line:
-                procesPy(f, dir_entry, i)
-            else:
-                processShell(f, dir_entry, i)
-            break
-        sql = "INSERT INTO document VALUES (" + str(i) + ',"'+ dir_entry +'", null)'
-        print sql
-        i += 1
         try:
-            cursor.execute(sql)
-            conn.commit()
-        except Exception as e:
-            print e    
+            f = open(path + dir_entry + '/hooks/install', 'r')
+            for line in f:
+                if 'python' in line:
+                    procesPy(f, dir_entry, i)
+                else:
+                    processShell(f, dir_entry, i)
+                break
+            sql = "INSERT INTO document VALUES (" + str(i) + ',"'+ dir_entry +'", null)'
+            print sql
+            i += 1
+            try:
+                cursor.execute(sql)
+                conn.commit()
+            except Exception as e:
+                print e    
+        except:
+            pass
            
 
 if __name__ == '__main__':
