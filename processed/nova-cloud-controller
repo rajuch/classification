@@ -1,0 +1,354 @@
+openstack-origin
+files
+/usr/bin
+config-changed
+nova-common
+amqp-relation-joined
+rabbit-user rabbit-vhost
+amqp-relation-changed
+amqp
+quantum
+neutron
+shared-db-relation-joined
+database
+database-user
+private-address
+quantum neutron
+neutron-database
+neutron-database-user
+private-address
+shared-db-relation-changed
+shared-db
+neutron quantum
+config
+cloud-compute
+image-service-relation-changed
+image-service
+identity-service-relation-joined
+identity-service-relation-changed
+identity-service
+/etc/nova/api-paste.ini
+quantum
+neutron
+cloud-compute
+quantum-network-service
+nova-vmware
+nova-volume-service-relation-joined
+cinder-volume-service-relation-joined
+identity-service
+auth_host
+auth_host
+auth_port auth_port
+service_port service_port
+service_username admin_user
+service_password admin_password
+service_tenant_name admin_tenant_name
+auth_uri auth_uri
+keystone_host
+service_tenant admin_tenant_name
+http://%s:%s/v2.0 auth_host auth_port
+/etc/quantum/novarc wb
+export os_username=%s\n service_username
+export os_password=%s\n service_password
+export os_tenant_name=%s\n service_tenant_name
+export os_auth_url=%s\n
+export os_region_name=%s\n region
+quantum neutron
+quantum_plugin
+region region
+quantum_security_groups quantum-security-groups
+quantum_url
+neutron-server
+ca_cert
+cloud-compute-relation-joined
+network_manager
+volume_service
+ec2_host private-address
+restart_trigger
+cloud-compute-relation-changed
+migration_auth_type
+ssh
+ssh_public_key
+cloud-compute-relation-departed
+ssh_public_key
+neutron-network-service-relation-joined
+quantum-network-service-relation-joined
+9696
+quantum_host
+quantum_url
+quantum_port
+quantum_plugin
+region region
+ca_cert
+cluster-relation-changed
+cluster-relation-departed
+ha-relation-joined
+res_nova_vip ocf:heartbeat:ipaddr2
+res_nova_haproxy lsb:haproxy
+params ip=  cidr_netmask=  nic
+vip vip_cidr vip_iface
+res_nova_vip
+res_nova_haproxy op monitor interval
+res_nova_haproxy haproxy
+cl_nova_haproxy res_nova_haproxy
+ha-bindiface
+ha-mcastport
+ha-relation-changed
+clustered
+none
+keystone endpoint configuration
+identity-service
+amqp-relation-broken
+cinder-volume-service-relation-broken
+identity-service-relation-broken
+image-service-relation-broken
+nova-volume-service-relation-broken
+shared-db-relation-broken
+quantum-network-service-relation-broken
+https
+a2ensite openstack_https_frontend
+a2dissite openstack_https_frontend
+identity-service
+network_manager
+quantum_plugin
+quantum_security_groups quantum-security-groups
+quantum_url
+neutron-server
+nova-vmware-relation-changed
+/etc/nova/nova.conf
+upgrade-charm
+amqp
+http://ubuntu-cloud.archive.canonical.com/ubuntu
+5edb1b62ec4926ea
+deb http://archive.ubuntu.com/ubuntu/ %s-proposed
+restricted main multiverse universe
+oneiric diablo
+precise essex
+quantal folsom
+raring grizzly
+saucy havana
+2011.2 diablo
+2012.1 essex
+2012.2 folsom
+2013.1 grizzly
+2013.2 havana
+2014.1 icehouse
+1.4.3 diablo
+1.4.8 essex
+1.7.4 folsom
+1.8.0 grizzly
+1.7.7 grizzly
+1.7.6 grizzly
+1.10.0 havana
+1.9.1 havana
+1.9.0 havana
+5g
+distrib_codename
+distro distro-proposed
+could not derive openstack release for
+this ubuntu release: %s
+cloud
+s- /
+deb ppa
+could not determine openstack codename for version %s
+could not derive openstack version for
+codename: %s
+could not determine version of package with no installation
+candidate: %s
+could not determine version of uninstalled package: %s
+swift
+could not determine openstack codename for version %s
+swift
+essex
+openstack-origin
+apt-key adv --keyserver keyserver.ubuntu.com
+recv-keys %s
+error importing repo key %s
+distro
+distro-proposed
+distrib_codename
+/etc/apt/sources.list.d/juju_deb.list w
+ppa
+add-apt-repository -y
+deb
+/etc/apt/sources.list.d/juju_deb.list w
+cloud
+distrib_codename
+cannot install from cloud archive pocket %s on this ubuntu
+version (%s
+staging
+ppa:ubuntu-cloud-archive/%s-staging
+add-apt-repository -y %s
+folsom precise-updates/folsom
+folsom/updates precise-updates/folsom
+folsom/proposed precise-proposed/folsom
+grizzly precise-updates/grizzly
+grizzly/updates precise-updates/grizzly
+grizzly/proposed precise-proposed/grizzly
+havana precise-updates/havana
+havana/updates precise-updates/havana
+havana/proposed precise-proposed/havana
+invalid cloud archive release specified: %s
+deb %s %s main
+ubuntu-cloud-keyring
+/etc/apt/sources.list.d/cloud-archive.list w
+invalid openstack-release specified: %s
+scripts/scriptrc
+s/%s
+wb
+#!/bin/bash\n
+export %s=%s\n
+script_path
+openstack-origin
+none none
+prepare_storage(): missing required input
+block_device=%s
+/dev/
+/dev/%s
+failed to locate valid block device at %s
+python-dnspython
+ptr
+python-dnspython
+charm_dir exec.d
+charm-pre-install
+t --tenant
+tenant name to create network for
+tenant store
+d --debug
+enable debug logging
+debug store_true
+g --gateway
+default gateway to use
+default_gateway store
+c --cidr
+cidr of external network
+cidr store
+f --floating-range
+range of floating ip
+floating_range store
+subnet
+os_username
+os_password
+os_tenant_name
+os_auth_url
+os_region_name
+os_username
+os_password
+os_tenant_name
+os_auth_url
+os_region_name
+name
+os_tenant_name
+id
+unable to locate tenant id for %s
+networks
+configuring external bridge
+name
+router:external
+tenant_id
+creating new external network definition: %s
+network network
+new external network created: %s id
+network %s already exists
+networks
+subnets
+name
+network_id id
+enable_dhcp
+ip_version
+tenant_id
+gateway_ip
+cidr
+allocation_pools
+start
+end
+creating new subnet for %s
+subnet subnet
+new subnet created: %s id
+subnet %s already exists
+subnets
+provider-router
+routers
+creating provider router for external network access
+router name provider-router tenant_id
+router
+new router created: %s id
+router provider-router already exists
+routers
+network:router_gateway
+id
+ports
+plugging router into ext_net
+id
+network_id id
+router connected to %s
+router already connect to %s
+admin_net
+t --tenant
+tenant name to create network for
+tenant store
+s --shared
+create a shared rather than private network
+shared store_true
+r --router
+router to plug new network into
+router store
+d --debug
+enable debug logging
+debug store_true
+d --disable-dhcp
+disable dhcp on network
+dhcp store_false
+n --dns-nameservers
+comma separated list of dns servers to use
+dns_servers store
+subnet
+os_username
+os_password
+os_tenant_name
+os_auth_url
+os_region_name
+os_username
+os_password
+os_tenant_name
+os_auth_url
+os_region_name
+name
+os_tenant_name
+id
+unable to locate tenant id for %s
+networks
+creating network: %s
+network
+name
+shared
+tenant_id
+network
+network %s already exists
+networks
+subnets
+creating subnet for %s
+subnet
+name
+network_id id
+enable_dhcp
+cidr
+ip_version
+tenant_id
+subnet
+subnet %s already exists
+subnets
+subnet
+dns_nameservers
+updating dns_nameservers (%s) for subnet %s
+id
+routers
+unable to locate provider router %s
+network:router_interface
+id
+ports
+adding interface from %s to %s
+routers
+id
+subnet_id id
+router already connected to subnet

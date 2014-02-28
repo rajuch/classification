@@ -1,0 +1,224 @@
+http://ubuntu-cloud.archive.canonical.com/ubuntu
+5edb1b62ec4926ea
+oneiric diablo
+precise essex
+quantal folsom
+raring grizzly
+saucy havana
+2011.2 diablo
+2012.1 essex
+2012.2 folsom
+2013.1 grizzly
+2013.2 havana
+2014.1 icehouse
+1.4.3 diablo
+1.4.8 essex
+1.7.4 folsom
+1.7.6 grizzly
+1.7.7 grizzly
+1.8.0 grizzly
+1.9.0 havana
+1.9.1 havana
+distrib_codename
+distro
+could not derive openstack release for
+this ubuntu release: %s
+cloud
+s- /
+deb ppa
+could not determine openstack codename for version %s
+could not derive openstack version for
+codename: %s
+could not determine version of package with no installation
+candidate: %s
+could not determine version of uninstalled package: %s
+swift
+could not determine openstack codename for version %s
+swift
+apt-key adv --keyserver keyserver.ubuntu.com
+recv-keys %s
+error importing repo key %s
+distro
+ppa
+add-apt-repository -y
+deb
+/etc/apt/sources.list.d/juju_deb.list w
+cloud
+distrib_codename
+cannot install from cloud archive pocket %s on this ubuntu
+version (%s
+staging
+ppa:ubuntu-cloud-archive/%s-staging
+add-apt-repository -y %s
+folsom precise-updates/folsom
+folsom/updates precise-updates/folsom
+folsom/proposed precise-proposed/folsom
+grizzly precise-updates/grizzly
+grizzly/updates precise-updates/grizzly
+grizzly/proposed precise-proposed/grizzly
+havana precise-updates/havana
+havana/updates precise-updates/havana
+havana/proposed precise-proposed/havana
+invalid cloud archive release specified: %s
+deb %s %s main
+ubuntu-cloud-keyring
+/etc/apt/sources.list.d/cloud-archive.list w
+invalid openstack-release specified: %s
+scripts/scriptrc
+s/%s
+wb
+#!/bin/bash\n
+export %s=%s\n
+script_path
+openstack-origin
+charm_dir exec.d
+charm-pre-install
+lp:charm-helpers
+invalid config file: %s
+charm-helpers
+checking out %s to %s
+bzr branch
+charmhelpers
+py
+/hooks/helpers/foo
+init__.py
+adding missing __init__.py: %s
+wb
+py
+syncing pyfile: %s -> %s
+init__.py
+init__.py
+inc=*
+inc
+py
+not syncing %s, does not match include
+filters (%s
+including file, which matches include
+filters (%s): %s
+py
+not syncing file: %s
+init__.py
+not syncing directory: %s
+removing existing directory: %s
+syncing directory: %s -> %s
+could not sync: %s. neither a pyfile or directory
+does it even exist?
+s.%s
+c --config store config
+helper config file
+d --debug store_true debug
+debug
+b --branch store branch
+charm-helpers bzr branch (overrides config
+d --destination store dest_dir
+sync destination dir (overrides config
+loading charm helper config from %s
+could not parse config from %s
+branch
+branch
+branch
+destination
+destination
+no destination dir. specified as option or config
+include
+no modules to sync specified as option or config
+include
+include
+options
+options
+branch
+include destination
+could not sync: %s
+cleaning up %s
+perform common charm tasks
+commands
+execd
+execute a directory of commands
+module charm-pre-install
+module to run (default: charm-pre-install
+dir
+override the exec.d directory path
+lib charm-helpers
+/srv/
+/run
+/logs
+/moin_static
+/wikiconfig.py
+/wsgi.py
+/logging.conf
+/xapian_is_initialized
+/etc/gunicorn.d/ .conf
+wiki_name
+admin_name
+languages
+loglevel
+xapian_search
+listen_port
+use_openid
+openidrp_authorized_teams
+extra_settings
+python-moinmoin
+python-flup
+gunicorn
+python-eventlet
+python-tz
+unzip
+python-openid
+python-xapian
+python-xappy
+python-docutils
+python-jinja2
+force-yes
+/etc/moin/farmconfig.py
+/etc/moin/farmconfig.py
+/data
+/usr/share/moin/data /data
+/underlay
+/usr/share/moin/underlay /underlay
+/usr/share/moin/htdocs
+config-changed
+bind
+
+charm_dir
+templates
+basedir
+unit_name
+wiki_name
+admin_name
+languages
+loglevel
+xapian_search
+listen_port
+use_openid
+openidrp_authorized_teams
+extra_settings
+wikiconfig.py.tmpl
+wsgi.py.tmpl
+logging.conf.tmpl
+gunicorn.conf.tmpl
+true
+moin --config-dir=%s/ index
+build --mode=add
+moin --config=dir=%s/ index
+build --mode=rebuild
+python -m moinmoin.packages i
+s/underlay/pages/languagesetup/attachments/%s--all_pages.zip
+root
+www-data
+/usr/share/pyshared/moinmoin/auth/openidrp_ext
+true
+files/openidrp.py
+s/moinmoin/auth/openidrp.py
+files/openidrp_teams.py
+s/openidrp_teams.py
+s/teams.py
+files/teams.py %s/teams.py
+s/teams.py
+s/moinmoin/auth/openidrp_ext/teams.py
+gunicorn
+website-relation-joined
+upgrade-charm
+start
+gunicorn
+stop
+gunicorn

@@ -1,0 +1,2 @@
+apt-get -y install charm-helper-sh
+apt-get install -y gcc make gawk git

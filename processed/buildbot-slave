@@ -1,0 +1,59 @@
+stdout
+stderr
+close_fds
+bake into
+baked in
+foo
+/bin/ls foo
+foo bar
+bar
+juju-log
+apt-get install -y --force-yes
+lsb_release -cs
+lucid -y
+apt-add-repository
+apt-get update
+ppa:yellow/ppa
+python-shell-toolbox
+bzr
+bzr
+branch
+bzr
+no-plugins cat
+/tmp
+/tmp
+wget -o
+mercurial
+hg clone
+git
+git clone
+bzr
+bzr_cat
+wget
+hg
+git
+chmod +x
+script-retrieval-method
+script-url
+script-path
+script-args
+buildbot-pkg
+extra-repository
+installdir
+temporary temporary
+addgroup buildbot
+usermod --gid buildbot buildbot
+usermod -s /bin/sh buildbot
+name
+passwd
+installdir
+private-address
+builders
+buildbot-pkg
+extra-repository
+extra-packages
+installdir
+extra-repository
+extra-packages
+buildbot-pkg
+temporary temporary

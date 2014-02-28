@@ -1,0 +1,90 @@
+/etc/squid3
+s/squid.conf
+/var/run/squid3
+config-get
+format=json
+relation-get --format=json
+r
+cached-website
+relation-ids --format=json
+relation-list --format=json -r
+sitenames
+sitenames sitenames
+relation-id
+name /
+/etc/squid3/squid.conf
+/etc/squid3/squid.conf
+http_port ([0-9]+
+tcp
+/usr/bin/open-port %d/%s
+tcp
+/usr/bin/close-port %d/%s
+iil0oo1
+refresh_patterns
+refresh_patterns
+refresh_patterns
+auth_list
+auth_list
+cache_l1
+cache_size_mb
+target_objs_per_dir avg_obj_size_kb
+cache_l2 cache_l1
+config
+relations
+refresh_patterns
+auth_list
+main_config.template
+check
+/usr/sbin/squid3 -f -k parse
+status
+status squid3
+running
+start stop reload restart
+squid3
+nagios
+nagios
+libwww-perl
+s/files/nrpe-external-master/check_squid charm_dir /usr/local/lib/nagios/plugins/
+juju_unit_name /
+/etc/nagios/nrpe.d/check_squidfp.cfg
+s-%s-%s nagios_context nagios_service_type
+/var/log/nagios
+/var/lib/nagios/export
+/var/lib/nagios/export/service__%s_check_squidfp.cfg
+*check_squidfp.cfg
+charm_dir templates
+nagios_hostname
+nagios_servicegroup nagios_context
+nrpe_service.template
+# check squidfp\n
+command[check_squidfp]=/usr/local/lib/nagios/plugins/check_squid %s - - 127.0.0.1 %s - - 200\n nagios_check_url
+/etc/init.d/nagios-nrpe-server
+service nagios-nrpe-server reload
+exec.d/*/charm-pre-install
+sh -c
+s/files/default.squid3 charm_dir /etc/default/squid3
+squid3 python-jinja2
+check
+reload
+status
+restart
+start
+status
+stop
+joined changed broken departed
+relation-set port=%s
+install
+config-changed
+start
+stop
+cached-website-relation-joined
+joined
+cached-website-relation-changed
+changed
+cached-website-relation-broken
+broken
+cached-website-relation-departed
+departed
+nrpe-external-master-relation-changed
+env-dump
+unknown hook

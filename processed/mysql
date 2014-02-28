@@ -1,0 +1,200 @@
+apt-get -y install munin-node libcache-cache-perl
+apt-get install -y debconf-utils python-mysqldb uuid pwgen dnsutils charm-helper-sh || exit 1
+db-admin-relation-joined
+s
+grant replication client on *.* to `%s` identified by
+revoke all on `%s`.* from `%s`
+revoke failed, ignoring error
+grant select on `%s`.* to `%s`
+grant all privileges on *.* to `%s` identified by
+grant all on `%s`.* to `%s` identified by
+unit-get private-address
+relation-set
+database=%s
+user=%s
+password=%s
+host=%s
+slave=%s
+show databases
+database exists already
+create database `%s` character set utf8
+relation-set
+database=%s
+user=%s
+password=%s
+host=%s
+slave=%s
+apt-get -y install apache2
+/var/lib/mysql
+juju_unit_name /
+res_mysql_vip
+vip
+vip_iface
+vip_cidr
+ha-bindiface
+ha-mcastport
+insufficient vip information to configure cluster
+res_mysqld mysql
+ceph auth
+*ceph* relation does not exist
+not sending *ha* relation data yet
+*ceph* relation exists. sending *ha* relation data
+ceph
+res_mysql_rbd ocf:ceph:rbd
+res_mysql_fs ocf:heartbeat:filesystem
+res_mysql_vip ocf:heartbeat:ipaddr2
+res_mysqld upstart:mysql
+rbd-name
+res_mysql_rbd params name=  pool=  user
+secret
+res_mysql_fs params device=  directory
+fstype=  op start start-delay
+res_mysql_vip params ip=  cidr_netmask=  nic
+res_mysqld op start start-delay=  op monitor interval
+grp_mysql res_mysql_rbd res_mysql_fs res_mysql_vip res_mysqld
+ha
+clustered
+shared-db
+vip
+auth
+key
+block-size
+rbd-name
+/dev/rbd/%s/%s
+ext4
+mysql
+this is not the peer leader. not configuring rbd
+mysql
+mysql
+ha
+*ha* relation exists. making sure the ha
+relation data is sent
+ha-relation-joined
+ha-relation-changed
+ceph-relation-joined
+ceph-relation-changed
+relationship with %s broken
+revoke all privileges on `%s`.* from `%s`
+revoked privileges for `%s` on database `%s`
+revoking failed, possibly incomplete relation. %s
+0-9]+$
+k m g t
+can only convert k,m,g, or t
+armv7l
+2700m
+4g
+juju-log -l info 32bit system restrictions in play
+config-get --format=json
+/proc/meminfo
+memtotal
+s%s
+distro percona
+flavor
+juju-log -l
+error
+invalid flavor, must be one of %s
+flavor distro
+mysql-server
+flavor percona
+repo.percona.com/apt
+percona-server-server
+mysql-client-core-5.5 mysql-server-core-5.5
+flavor mariadb
+ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu
+mariadb-server
+lsb_release -cs
+keys/%s
+apt-key add keys/%s
+juju-log -l error
+no key for %s
+add-apt-repository -y deb http://%s %s main
+apt-get update
+/var/lib/mysql/mysql.passwd r
+debconf-set-selections
+s %s/root_password password %s\n
+s %s/root_password_again password %s\n
+apt-get -y remove
+apt-get -y install -qq
+dataset-size
+juju-log -l info dataset size in bytes: %d
+query-cache-size query-cache-type on demand
+query-cache-size
+query-cache-type on
+query-cache-type
+query-cache-type demand
+query-cache-type
+query-cache-type
+preferred-storage-engine
+innodb-flush-log-at-trx-commit
+sync-binlog
+innodb
+innodb-buffer-pool-size
+tuning-level fast
+innodb-flush-log-at-trx-commit
+innodb-buffer-pool-size
+default-storage-engine
+myisam
+key-buffer
+key-buffer 8m
+tuning-level fast
+sync-binlog
+max-connections
+max-connections # max_connections = ?
+max-connections max_connections = %s max-connections
+/var/lib/juju/i.am.a.slave
+juju_unit_name /
+tuning-level fast
+binlog_format mixed
+/etc/mysql/conf.d/binlog.cnf
+/etc/mysql/my.cnf
+s.%s
+service mysql stop
+service mysql start
+/var/lib/mysql/%s.service_user2
+pwgen -n 2 15 \n
+s\n
+s\n
+juju_relation_id
+juju_remote_unit
+s_database_name
+s\n
+no established database and no remote_unit
+/var/lib/juju/%s.%s.lastrun
+/var/lib/juju.slave.configured.for.%s
+/var/lib/juju/i.am.a.slave
+/var/lib/juju/%s.mysql.broken
+/var/lib/mysql/mysql.passwd
+root localhost
+show databases
+create database
+show grants for  @
+no grants found
+grant all privileges on `{}`
+grant all privileges on {}.* to  @
+identified by
+drop from mysql.user where user
+and host
+res_mysql_vip
+pwgen -s 16
+relation-get
+format
+json
+/var/lib/mysql/mysql-{}.passwd
+127.0.0.1
+mysql service is peered, bailing shared-db relation
+as this service unit is not the leader
+private-address
+database
+username
+hostname
+hostname
+database
+username
+vip
+
+password
+hostname
+database
+username
+vip
+shared-db-relation-changed

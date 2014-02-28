@@ -1,0 +1,4 @@
+apt-get install -y hadoop dotdee
+$pig" = "true" ] && apt-get install -y pig ||
+apt-get -y install hadoop-$1
+apt-get -y install -qq --no-install-recommends ganglia-monitor

@@ -1,0 +1,12 @@
+apt-get -y install mysql-client pwgen git-core php-pear nginx php5 php5-fpm php-apc mailutils php-mail sysstat php5-mysql php5-mcrypt charm-helper-sh php5-curl rsync
+juju_remote_unit
+relation-list
+relation-get private-address
+server %s:8080;\n
+/etc/nginx/sites-available/ loadbalancer
+/etc/nginx/sites-available/loadbalancer.old
+/etc/nginx/sites-available/loadbalancer /etc/nginx/sites-available/loadbalancer.old
+/etc/nginx/sites-available/loadbalancer
+service nginx start
+service nginx reload
+open-port 80

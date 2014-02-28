@@ -1,0 +1,210 @@
+res_glance_vip
+apache2 glance python-mysqldb python-swift
+python-keystone uuid haproxy
+glance-api glance-registry
+glance
+/etc/glance/glance-registry.conf
+/etc/glance/glance-registry-paste.ini
+/etc/glance/glance-api.conf
+/etc/glance/glance-api-paste.ini
+/etc/ceph/ceph.conf
+/etc/haproxy/haproxy.cfg
+/etc/apache2/sites-available/openstack_https_frontend
+/etc/apache2/sites-available/
+openstack_https_frontend.conf
+/etc/glance
+templates/
+hook_contexts
+services glance-registry
+hook_contexts
+services glance-api
+hook_contexts
+services glance-api
+hook_contexts
+services glance-registry
+hook_contexts
+services glance-api glance-registry
+hook_contexts
+services haproxy
+hook_contexts
+services apache2
+hook_contexts
+services apache2
+glance-common essex
+ceph
+/etc/ceph
+hook_contexts
+/etc/apache2/conf-available
+hook_contexts
+hook_contexts
+glance-manage db_sync
+openstack-origin
+option dpkg::options::=--force-confnew
+option dpkg::options::=--force-confdef
+services
+install
+openstack-origin
+distrib_codename precise
+distro
+cloud:precise-folsom
+shared-db-relation-joined
+database database-user
+private-address
+shared-db-relation-changed
+glance-common
+shared-db
+essex
+essex
+glance-manage db_version
+glance-manage version_control 0
+image-service-relation-joined
+glance-api-server :9292
+glance-api-server
+object-store-relation-joined
+identity-service
+an identity-service relation exists
+object-store
+ceph-relation-joined
+/etc/ceph
+ceph-common python-ceph
+ceph-relation-changed
+ceph
+glance glance
+ceph-osd-replication-count
+identity-service-relation-joined
+9292
+service glance
+region region
+public_url
+admin_url
+internal_url
+identity-service-relation-changed
+identity-service
+object-store
+config-changed
+glance-common
+cluster-relation-changed
+upgrade-charm
+ha-relation-joined
+ha-bindiface
+ha-mcastport
+vip
+vip_iface
+vip_cidr
+res_glance_vip ocf:heartbeat:ipaddr2
+res_glance_haproxy lsb:haproxy
+res_glance_vip params ip=  cidr_netmask=  nic
+res_glance_haproxy op monitor interval
+res_glance_haproxy haproxy
+cl_glance_haproxy res_glance_haproxy
+ha-relation-changed
+clustered
+none
+identity-service
+image-service
+ceph-relation-broken
+identity-service-relation-broken
+object-store-relation-broken
+shared-db-relation-broken
+https
+a2ensite openstack_https_frontend
+a2dissite openstack_https_frontend
+identity-service
+image-service
+amqp-relation-joined
+rabbit-user rabbit-vhost
+amqp-relation-changed
+amqp
+http://ubuntu-cloud.archive.canonical.com/ubuntu
+5edb1b62ec4926ea
+deb http://archive.ubuntu.com/ubuntu/ %s-proposed
+restricted main multiverse universe
+oneiric diablo
+precise essex
+quantal folsom
+raring grizzly
+saucy havana
+2011.2 diablo
+2012.1 essex
+2012.2 folsom
+2013.1 grizzly
+2013.2 havana
+2014.1 icehouse
+1.4.3 diablo
+1.4.8 essex
+1.7.4 folsom
+1.8.0 grizzly
+1.7.7 grizzly
+1.7.6 grizzly
+1.10.0 havana
+1.9.1 havana
+1.9.0 havana
+5g
+distrib_codename
+distro distro-proposed
+could not derive openstack release for
+this ubuntu release: %s
+cloud
+s- /
+deb ppa
+could not determine openstack codename for version %s
+could not derive openstack version for
+codename: %s
+could not determine version of package with no installation
+candidate: %s
+could not determine version of uninstalled package: %s
+swift
+could not determine openstack codename for version %s
+swift
+essex
+openstack-origin
+apt-key adv --keyserver keyserver.ubuntu.com
+recv-keys %s
+error importing repo key %s
+distro
+distro-proposed
+distrib_codename
+/etc/apt/sources.list.d/juju_deb.list w
+ppa
+add-apt-repository -y
+deb
+/etc/apt/sources.list.d/juju_deb.list w
+cloud
+distrib_codename
+cannot install from cloud archive pocket %s on this ubuntu
+version (%s
+staging
+ppa:ubuntu-cloud-archive/%s-staging
+add-apt-repository -y %s
+folsom precise-updates/folsom
+folsom/updates precise-updates/folsom
+folsom/proposed precise-proposed/folsom
+grizzly precise-updates/grizzly
+grizzly/updates precise-updates/grizzly
+grizzly/proposed precise-proposed/grizzly
+havana precise-updates/havana
+havana/updates precise-updates/havana
+havana/proposed precise-proposed/havana
+invalid cloud archive release specified: %s
+deb %s %s main
+ubuntu-cloud-keyring
+/etc/apt/sources.list.d/cloud-archive.list w
+invalid openstack-release specified: %s
+scripts/scriptrc
+s/%s
+wb
+#!/bin/bash\n
+export %s=%s\n
+script_path
+openstack-origin
+none none
+prepare_storage(): missing required input
+block_device=%s
+/dev/
+/dev/%s
+failed to locate valid block device at %s
+python-dnspython
+ptr
+python-dnspython
+charm_dir exec.d
+charm-pre-install

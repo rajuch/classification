@@ -1,0 +1,42 @@
+/etc/ssl/certs/landscape_server_ca.crt
+ssl-public-key
+ssl-public-key
+ssl-public-key
+ping-url
+account-name
+meta-data.d
+meta_data_path
+juju-info.json
+juju-env-uuid environment-uuid
+juju-unit-name unit-name
+juju-api-addresses api-addresses
+juju-private-address private-address
+incomplete juju information found in %s
+environment-uuid juju_env_uuid
+unit-name juju_remote_unit
+api-addresses juju_api_addresses
+private-address private-address
+juju-info.json
+computer-title juju_remote_unit
+juju-info.json
+computer-title
+key
+ceph key not reported in relation config, nothing to do
+landscape-client key
+writing ceph keyring file failed with code %d
+auth
+private-address
+config-changed
+upgrade-charm
+registration-relation-joined
+registration-relation-changed
+registration-relation-departed
+container-relation-joined
+container-relation-departed
+ceph-client-relation-broken
+ceph-client-relation-joined
+ceph-client-relation-changed
+ceph-client-relation-departed
+apt_get install devscripts bzr pbuilder
+apt_get install apt-transport-https wget
+apt_get install landscape-client

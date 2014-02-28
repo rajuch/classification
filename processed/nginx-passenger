@@ -1,0 +1,2 @@
+apt-get install -y -qq build-essential python-software-properties libcurl4-openssl-dev libssl-dev zlib1g-dev
+apt-get install -y -qq nginx-full passenger-common1.9.1 ruby1.9.1-dev

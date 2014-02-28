@@ -1,0 +1,1 @@
+debian_frontend=noninteractive apt-get -qq install -y cassandra python-cheetah dnsutils bzr ${extra_packages

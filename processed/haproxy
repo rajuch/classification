@@ -1,0 +1,243 @@
+apt-get -y install munin-node
+/etc/haproxy
+s/haproxy.cfg
+/var/run/haproxy
+haproxy
+mode tcp
+option tcplog
+mode http
+option httplog
+backlog
+bind
+capture cookie
+capture request header
+capture response header
+clitimeout
+default_backend
+maxconn
+monitor fail
+monitor-net
+monitor-uri
+option accept-invalid-http-request
+option clitcpka
+option contstats
+option dontlog-normal
+option dontlognull
+option http-use-proxy-header
+option log-separate-errors
+option logasap
+option socket-stats
+option tcp-smart-accept
+rate-limit sessions
+tcp-request content accept
+tcp-request content reject
+tcp-request inspect-delay
+timeout client
+timeout clitimeout
+use_backend
+install hold
+\n
+dpkg --set-selections
+/etc/default/haproxy
+enabled=0 enabled=1
+global_log
+global
+log %s
+maxconn %d global_maxconn
+user %s global_user
+group %s global_group
+global_debug
+debug
+global_quiet
+quiet
+spread-checks %d
+global_spread_checks
+default_options
+default_timeouts
+defaults
+log %s default_log
+mode %s default_mode
+option %s
+retries %d default_retries
+timeout %s
+/etc/haproxy/haproxy.cfg
+/etc/haproxy/haproxy.cfg
+stats auth\s+(\w+):(\w+
+/etc/haproxy/haproxy.cfg
+/etc/haproxy/haproxy.cfg
+listen\s+([^\s]+)\s+([^:]+):(.*
+\s+bind\s+([^:]+):(\d+)\s*\n\s+default_backend\s+([^\s]+
+sysctl
+/etc/sysctl.d/50-haproxy.conf w
+\n
+sysctl -p /etc/sysctl.d/50-haproxy.conf
+juju_unit_name /
+frontend %s-%s
+bind %s:%s
+default_backend %s
+s
+backend %s
+s
+server %s %s:%s
+haproxy_monitoring
+enable_monitoring
+monitoring_password changeme
+monitoring_password
+monitoring_password changeme
+mode http
+acl allowed_cidr src %s
+monitoring_allowed_cidr
+block unless allowed_cidr
+stats enable
+stats uri /
+stats realm haproxy\ statistics
+stats auth %s:%s
+monitoring_username
+stats refresh %d
+monitoring_stats_refresh
+0.0.0.0
+monitoring_port
+services
+service_name
+service_name
+service_options
+service_options
+service_options
+service_options
+option forwardfor
+service_options
+service_options option forwardfor
+server_options
+server_options
+server_options server_options
+services
+servers servers
+servers
+servers
+service_host
+service_port
+service_host service_port
+monitoring_port
+service_host 0.0.0.0
+service_port
+s.is.proxy
+reverseproxy
+services
+services
+unit
+services
+skipping further processing
+port private-address
+private-address
+port
+s-%s /
+service_name
+service_name
+service_name
+service_name
+sitenames
+sitenames
+service
+service
+service_name
+servers
+server_options
+servers
+peer
+unit
+all_services
+service_name
+service_name
+service_host service_host
+service_port service_port
+service_options balance leastconn
+mode tcp
+option tcplog
+servers
+/
+private-address
+service_port check
+juju_unit_name /
+private-address
+service_options
+timeout
+service_options
+servers
+service_port
+check
+backup
+service_port
+be
+service_name
+servers
+service_name
+s.service w
+service_host
+service_port
+service_options
+s/%s.service
+s/%s.service
+s/*.service
+\n\n
+s/%s.service
+s/*.service
+\n\n
+check
+/usr/sbin/haproxy -f -c
+service haproxy
+haproxy
+package_status
+package_status
+enable_monitoring
+check
+reload
+status
+restart
+start
+status
+stop
+changed departed
+changed
+0.0.0.0
+localhost
+service_name
+service_name
+is-proxy
+s__%d hostname
+port
+s/%s.is.proxy
+falling back to default host/port
+service_host
+service_port
+website
+peer
+charm_dir files
+nrpe
+/usr/lib/nagios/plugins
+*.sh
+haproxy check haproxy check_haproxy.sh
+haproxy_queue check haproxy queue depth
+check_haproxy_queue_depth.sh
+install
+config-changed upgrade-charm
+start
+stop
+reverseproxy-relation-broken
+reverseproxy-relation-changed
+changed
+reverseproxy-relation-departed
+departed
+website-relation-joined
+joined
+website-relation-changed
+changed
+peer-relation-joined
+joined
+peer-relation-changed
+changed
+nrpe-external-master-relation-joined
+local-monitors-relation-joined
+unknown hook
+hooks.py
+missing required hook name argument
+debian_frontend=noninteractive apt-get -y -qq -o dpkg::options::="--force-confdef" -o dpkg::options::="--force-confold" install $@

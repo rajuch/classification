@@ -1,0 +1,6 @@
+apt-get install -q -y nagios-nrpe-server \
+s raised unknown exception
+s: does not exist
+s: is not readable
+s: was last modified on %s and is too old (> %s seconds
+s: was last modified on %s which is in the future

@@ -1,0 +1,60 @@
+files/www/*
+/var/www/
+/var/lib/ceph/nss
+multiverse
+radosgw
+libapache2-mod-fastcgi
+apache2
+ntp
+/etc/ceph
+/etc/ceph
+auth_supported none
+mon_hosts
+hostname
+version radosgw
+radosgw 0.55
+/etc/ceph/ceph.conf w
+ceph.conf
+hostname private-address
+/etc/apache2/sites-available/rgw w
+rgw
+a2dissite default
+a2ensite rgw
+a2enmod fastcgi
+a2enmod rewrite
+service apache2 reload
+mon
+6789
+private-address
+auth
+mon
+identity-service
+auth_type keystone
+auth_protocol http
+auth_host auth_host
+auth_port auth_port
+admin_token admin_token
+user_roles operator-roles
+cache_size cache-size
+revocation_check_interval revocation-check-interval
+radosgw_key
+private-address
+service radosgw start
+service radosgw stop
+service radosgw restart
+radosgw 0.55
+integration with keystone requires ceph >= 0.55
+private-address
+http://{}:80/swift
+/v1
+swift
+region
+operator-roles
+install
+config-changed
+mon-relation-departed
+mon-relation-changed
+gateway-relation-joined
+upgrade-charm
+identity-service-relation-joined
+identity-service-relation-changed

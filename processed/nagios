@@ -1,0 +1,24 @@
+monitors
+target-id
+target-address
+monitors:99 testing/0
+relation-get --format=json
+r
+monitors
+monitors
+target-id
+target-id /
+target-address private-address
+monitors monitors remote
+target-address
+target-id
+target-id
+service nagios3 reload
+monitors
+target-id
+target-address
+address
+monitors remote
+s-%s
+ignoring %s due to unknown family %s
+apt-get -y install pwgen

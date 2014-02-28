@@ -1,0 +1,3 @@
+apt-get -y install debconf debconf-utils bzr pwgen
+apt-get install -y python-zsi python-werkzeug python-vobject python-vatnumber \
+apt-get install -y openerp-server python-ldap python-imaging --no-install-recommends

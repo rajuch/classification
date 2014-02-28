@@ -1,0 +1,534 @@
+/etc/keystone/keystone.conf
+/var/lib/keystone/keystone.passwd
+/var/lib/keystone/keystone.token
+/var/lib/keystone/services.passwd
+/var/lib/keystone/juju_ssl/
+ubuntu cloud
+res_ks_vip
+juju_keystone
+error: command %s return non-zero.\n
+config-get --format json
+error: config option has no paramter: %s
+hostname private-address
+http://localhost:{}/v2.0/
+admin-port
+none
+configuring keystone to use
+a pre-configured admin token
+configuring keystone to use a random admin token
+loading a previously generated
+admin token from %s
+pwgen -c 32 1
+s\n
+default
+admin_token
+could not parse admin_token line from %s
+could not find admin_token line in %s
+file
+file
+file
+default
+wb
+name
+service entry for   already exists
+service_id region
+endpoint template already exists for   in
+publicurl adminurl internalurl
+updating endpoint template with
+new endpoint urls
+id
+name
+created by juju
+name
+could not resolve tenant_id for tenant %s
+juju@localhost
+name
+could not resolve [%s, %s, %s
+user   already has role   on tenant
+admin
+admin-token none
+admin-token
+admin-user
+admin token-expiry
+admin
+service-tenant
+admin-password none
+admin-password
+r \n
+admin-user
+pwgen -c 16 1
+w+ %s\n
+admin-user admin
+admin-user
+admin-role admin-user admin
+keystoneadmin admin-user admin
+keystoneserviceadmin admin-user admin
+keystone identity keystone identity service
+vip
+hostname
+region
+service-port
+admin-port
+http://%s:%s/v2.0
+http://%s:%s/v2.0
+http://%s:%s/v2.0
+keystone
+could not resolve user id for
+wb
+s:%s\n
+pwgen -c 32 1
+enable-pki true true
+signing uuid
+signing uuid
+keystone
+beginning keystone upgrade: %s -> %s
+y%m%d%h%m
+tar -pcf /var/lib/juju/keystone-backup-%s.tar /etc/keystone
+apt-get update
+debian_frontend noninteractive
+apt-get --option dpkg::options::=--force-confnew -y
+install %s
+admin-token
+shared-db
+configuring new keystone.conf for
+database access on existing database
+relation to %s
+sql mysql://%s:%s@%s/%s
+database-user
+password
+private-address
+database
+keystone
+running database migrations for %s
+keystone-manage db_sync
+not cluster leader; snoozing whilst
+leader upgrades db
+keystone
+completed keystone upgrade
+s -> %s
+cluster
+keystone keystone
+s_intermediate_ca
+s_root_ca
+chown -r %s.%s %s
+chmod -r g+rwx %s
+https-service-endpoints yes true true
+keystone python-mysqldb pwgen
+haproxy python-jinja2 openssl unison
+python-sqlalchemy
+keystone
+nova
+type compute
+desc nova compute service
+nova-volume
+type volume
+desc nova volume service
+cinder
+type volume
+desc cinder volume service
+ec2
+type ec2
+desc ec2 compatibility layer
+glance
+type image
+desc glance image service
+s3
+type s3
+desc s3 compatible object-store
+swift
+type object-store
+desc swift object storage service
+quantum
+type network
+desc quantum networking service
+oxygen
+type oxygen
+desc oxygen cloud image service
+ceilometer
+type metering
+desc ceilometer metering service
+heat
+type orchestration
+desc heat orchestration service
+default
+service-port
+default
+admin-port
+admin-token
+sql
+sqlite:////var/lib/keystone/keystone.db
+identity
+keystone.identity.backends.sql.identity
+catalog
+keystone.catalog.backends.sql.catalog
+token
+keystone.token.backends.sql.token
+ec2
+keystone.contrib.ec2.backends.sql.ec2
+keystone
+keystone-manage db_sync
+keystone
+keystone
+chmod -r g+wrx /var/lib/keystone/
+database database
+username database-user
+hostname hostname
+password
+db_host
+db_host or password not set. peer not ready, exit 0
+sql mysql://%s:%s@%s/%s
+database-user
+password
+db_host
+database
+cluster leader, performing db-sync
+keystone-manage db_sync
+keystone
+identity-service
+re-exec
+for: %s - %s
+invalid service requested
+desc
+type
+requested_roles
+requested_roles none
+requested_roles
+deferring identity_changed() to service leader
+service region public_url admin_url
+internal_url
+none
+auth_host vip
+service_host vip
+auth_host hostname
+service_host hostname
+auth_port admin-port
+service_port service-port
+https-service-endpoints true true
+https_keystone true
+ca_cert
+rid
+creating requested role: %s
+service
+region
+service
+public_url
+admin_url
+internal_url
+service
+internal_url
+
+service
+region service
+public_url
+admin_url
+internal_url
+service
+internal_url
+none
+creating service credentials for
+service-tenant
+admin-role
+service-tenant
+creating requested role: %s
+service-tenant
+admin_token
+service_host hostname
+service_port service-port
+auth_host hostname
+auth_port admin-port
+service_username
+service_password
+service_tenant service-tenant
+https_keystone false
+ssl_cert
+ssl_key
+ca_cert
+rid
+auth_host vip
+service_host vip
+https-service-endpoints true true
+ssl_cert
+ssl_key
+ca_cert
+https_keystone true
+cluster
+keystone
+chmod -r g+wrx /var/lib/keystone/
+openstack-origin
+keystone
+openstack-origin
+chmod -r g+wrx /var/lib/keystone/
+openstack_service_keystone keystone
+openstack_port_admin
+admin-port
+openstack_port_public
+service-port
+admin-token
+cluster leader - ensuring endpoint configuration
+is up to date
+logger_root log-level
+/etc/keystone/logging.conf
+keystone 2013.1
+keystone
+firing identity_changed hook
+for all related services
+identity-service
+cluster leader - ensuring endpoint configuration
+is up to date
+keystone
+cluster
+default
+service-port
+default
+admin-port
+keystone
+keystone_admin
+admin-port
+admin-port
+keystone_service
+service-port
+service-port
+keystone
+cluster
+keystone_admin
+admin-port
+admin-port
+keystone_service
+service-port
+service-port
+clustered
+cluster configured, notifying other services
+and updating keystone endpoint configuration
+identity-service
+vip
+vip
+ha-bindiface
+ha-mcastport
+vip
+vip_cidr
+vip_iface
+res_ks_vip ocf:heartbeat:ipaddr2
+res_ks_haproxy lsb:haproxy
+res_ks_vip params ip=  cidr_netmask=  nic
+res_ks_haproxy op monitor interval
+res_ks_haproxy haproxy
+cl_ks_haproxy res_ks_haproxy
+install
+shared-db-relation-joined
+shared-db-relation-changed
+identity-service-relation-joined
+identity-service-relation-changed
+config-changed
+cluster-relation-joined
+cluster-relation-changed
+cluster-relation-departed
+ha-relation-joined
+ha-relation-changed
+upgrade-charm
+365
+ubuntu
+ubuntu cloud
+/usr/local/share/ca-certificates/juju_ca_cert.crt
+ensuring certificate authority exists at %s
+initializing new certificate authority at %s
+certs crl newcerts private
+creating %s
+private
+serial
+serial wb
+01\n
+index.txt
+index.txt wb
+ca.cnf
+creating new ca config in %s
+ca.cnf wb
+cacert.pem
+private cacert.key
+missing %s, will re-initialize cert+key
+found %s
+openssl req -config ca.cnf
+x509 -nodes -newkey rsa -days 21360
+keyout -out -outform pem
+creating new intermediate csr
+private cacert.key
+cacert.csr
+openssl req -config ca.cnf
+sha1 -newkey rsa -nodes -keyout -out
+outform
+pem
+signing certificate request %s
+certs
+s.crt
+/o=%s/ou=%s/cn=%s
+openssl ca -batch -config
+ca.cnf
+extensions ca_extensions -days -notext
+in -out -subj -batch
+cacert.pem
+cacert.pem
+intermediate ca certificate already exists
+signing.cnf
+creating new signing config in %s
+signing.cnf wb
+/o=%s/ou=%s/cn=%s
+certs %s.csr
+certs %s.key
+openssl req -sha1 -newkey rsa -nodes -keyout
+out -subj
+signed new csr, crt @ %s
+ca bundle @ %s is up to date
+updating ca bundle @ %s
+wb
+update-ca-certificates
+s certificate authority
+s intermediate certificate authority
+chown -r %s.%s
+chown -r %s.%s
+/o=%s/ou=%s/cn=%s
+certs %s.crt
+openssl ca -config
+signing.cnf -extensions
+req_extensions -days 365 -notext -in
+out -batch -subj
+/o=%s/ou=%s/cn=%s
+certs %s.csr
+certs %s.key
+openssl req -sha1 -newkey rsa -nodes
+keyout -out -subj
+chown -r %s.%s
+signed new csr, crt @ %s
+getting certificate and key for %s
+certs %s.key
+certs %s.crt
+found existing certificate for %s
+could not load ssl private key for %s from %s
+r r
+cacert.pem
+cacert.pem
+name
+id
+name
+id
+name
+id
+name
+id
+type
+id
+could not get homedir for user %s: user exists?
+ssh
+id_rsa
+ssh-keygen -q -n  -t rsa -b 2048
+f
+s.pub
+ssh-keygen -y -f
+wb
+chown -r
+ssh
+authorized_keys
+wb
+s\n
+ssh
+known_hosts
+ssh-keyscan -h -t rsa
+wb
+s\n
+adduser --system --shell /bin/bash
+addgroup
+ingroup
+s-relation-joined
+joined
+s-relation-changed
+ssh_pub_key
+ssh_pub_key
+private-address
+ssh_authorized_peers(): ssh_pub_key
+missing for unit %s, skipping
+home
+unison -auto -batch=true -confirmbigdel=false
+fastcheck=true -group=false -owner=false
+prefer=newer -times=true
+silent
+ssh_authorized_hosts
+unison sync_to_peers: peer has not authorized *any*
+hosts yet
+private-address
+private-address
+private-address
+unison sync_to_peers: peer (%s) has not authorized
+*this* host yet, skipping
+private-address
+ssh://%s@%s/%s
+http://ubuntu-cloud.archive.canonical.com/ubuntu
+5edb1b62ec4926ea
+oneiric diablo
+precise essex
+quantal folsom
+raring grizzly
+saucy havana
+2011.2 diablo
+2012.1 essex
+2012.2 folsom
+2013.1 grizzly
+2013.2 havana
+1.4.3 diablo
+1.4.8 essex
+1.7.4 folsom
+1.7.6 grizzly
+1.7.7 grizzly
+1.8.0 grizzly
+juju-log
+/etc/lsb-release r
+distrib_codename
+distro
+code not derive openstack release for
+this ubuntu release: %s
+cloud
+s- /
+deb ppa
+could not determine openstack codename for version %s
+code not derive openstack version for
+codename: %s
+could not determine version of installed package: %s
+swift
+could not determine openstack codename for version %s
+swift
+could not determine openstack version for package: %s
+apt-key adv --keyserver keyserver.ubuntu.com
+recv-keys %s
+error importing repo key %s
+distro
+ppa
+add-apt-repository -y
+deb
+invalid openstack-release: %s
+/etc/apt/sources.list.d/juju_deb.list w
+cloud
+distrib_codename
+cannot install from cloud archive pocket %s on this ubuntu
+version (%s
+staging
+ppa:ubuntu-cloud-archive/%s-staging
+add-apt-repository -y %s
+folsom precise-updates/folsom
+folsom/updates precise-updates/folsom
+folsom/proposed precise-proposed/folsom
+grizzly precise-updates/grizzly
+grizzly/updates precise-updates/grizzly
+grizzly/proposed precise-proposed/grizzly
+havana precise-updates/havana
+havana/updates precise-updates/havana
+havana/proposed precise-proposed/havana
+invalid cloud archive release specified: %s
+deb %s %s main
+/etc/apt/sources.list.d/cloud-archive.list w
+invalid openstack-release specified: %s
+scripts/scriptrc
+charm_dir
+s/%s
+wb
+#!/bin/bash\n
+export %s=%s\n
+script_path
+charm_dir exec.d
+charm-pre-install

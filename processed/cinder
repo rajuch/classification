@@ -1,0 +1,162 @@
+install
+openstack-origin
+distrib_codename precise
+distro
+cloud:precise-folsom
+volume
+block-device none none
+block-device
+overwrite true true
+volume-group
+config-changed
+cinder-common
+shared-db-relation-joined
+database database-user
+private-address
+shared-db-relation-changed
+shared-db
+amqp-relation-joined
+rabbit-user rabbit-vhost
+amqp-relation-changed
+amqp
+identity-service-relation-joined
+api-listening-port
+s/v1/$(tenant_id)s
+region region
+service cinder
+public_url
+internal_url
+admin_url
+identity-service-relation-changed
+identity-service
+ceph-relation-joined
+/etc/ceph
+/etc/ceph
+ceph-common
+ceph-relation-changed
+ceph
+cinder cinder
+ceph-osd-replication-count
+cluster-relation-changed
+cluster-relation-departed
+ha-relation-joined
+res_cinder_vip ocf:heartbeat:ipaddr2
+res_cinder_haproxy lsb:haproxy
+params ip=  cidr_netmask=  nic
+vip vip_cidr vip_iface
+res_cinder_vip
+res_cinder_haproxy op monitor interval
+res_cinder_haproxy haproxy
+cl_cinder_haproxy res_cinder_haproxy
+ha-bindiface
+ha-mcastport
+ha-relation-changed
+clustered
+none
+keystone endpoint configuration
+identity-service
+image-service-relation-changed
+amqp-relation-broken
+ceph-relation-broken
+identity-service-relation-broken
+image-service-relation-broken
+shared-db-relation-broken
+https
+a2ensite openstack_https_frontend
+a2dissite openstack_https_frontend
+identity-service
+upgrade-charm
+amqp
+http://ubuntu-cloud.archive.canonical.com/ubuntu
+5edb1b62ec4926ea
+deb http://archive.ubuntu.com/ubuntu/ %s-proposed
+restricted main multiverse universe
+oneiric diablo
+precise essex
+quantal folsom
+raring grizzly
+saucy havana
+2011.2 diablo
+2012.1 essex
+2012.2 folsom
+2013.1 grizzly
+2013.2 havana
+2014.1 icehouse
+1.4.3 diablo
+1.4.8 essex
+1.7.4 folsom
+1.8.0 grizzly
+1.7.7 grizzly
+1.7.6 grizzly
+1.10.0 havana
+1.9.1 havana
+1.9.0 havana
+5g
+distrib_codename
+distro distro-proposed
+could not derive openstack release for
+this ubuntu release: %s
+cloud
+s- /
+deb ppa
+could not determine openstack codename for version %s
+could not derive openstack version for
+codename: %s
+could not determine version of package with no installation
+candidate: %s
+could not determine version of uninstalled package: %s
+swift
+could not determine openstack codename for version %s
+swift
+essex
+openstack-origin
+apt-key adv --keyserver keyserver.ubuntu.com
+recv-keys %s
+error importing repo key %s
+distro
+distro-proposed
+distrib_codename
+/etc/apt/sources.list.d/juju_deb.list w
+ppa
+add-apt-repository -y
+deb
+/etc/apt/sources.list.d/juju_deb.list w
+cloud
+distrib_codename
+cannot install from cloud archive pocket %s on this ubuntu
+version (%s
+staging
+ppa:ubuntu-cloud-archive/%s-staging
+add-apt-repository -y %s
+folsom precise-updates/folsom
+folsom/updates precise-updates/folsom
+folsom/proposed precise-proposed/folsom
+grizzly precise-updates/grizzly
+grizzly/updates precise-updates/grizzly
+grizzly/proposed precise-proposed/grizzly
+havana precise-updates/havana
+havana/updates precise-updates/havana
+havana/proposed precise-proposed/havana
+invalid cloud archive release specified: %s
+deb %s %s main
+ubuntu-cloud-keyring
+/etc/apt/sources.list.d/cloud-archive.list w
+invalid openstack-release specified: %s
+scripts/scriptrc
+s/%s
+wb
+#!/bin/bash\n
+export %s=%s\n
+script_path
+openstack-origin
+none none
+prepare_storage(): missing required input
+block_device=%s
+/dev/
+/dev/%s
+failed to locate valid block device at %s
+python-dnspython
+ptr
+python-dnspython
+charm_dir exec.d
+charm-pre-install

@@ -1,0 +1,158 @@
+/etc/squid3
+s/squid.conf
+/var/run/squid3
+/usr/lib/nagios/plugins
+server name address port options
+squid3
+/
+
+
+
+cached-website
+sitenames
+sitenames sitenames
+relation-id
+name /
+services
+service_name
+server_options
+servers
+website
+unit
+relid
+port all_services
+private-address
+for  , skipping
+sitenames
+private-address
+port
+all_services
+service_name
+private-address
+service_port
+sitenames
+all_services
+private-address
+port
+install hold
+\n
+dpkg --set-selections
+/etc/squid3/squid.conf
+/etc/squid3/squid.conf
+http_port ([0-9]+
+/etc/squid3/squid.conf
+acl [\w_-]+ dstdomain ([^!].*
+iil0oo1
+refresh_patterns
+refresh_patterns
+min
+percent
+max
+options
+charm_dir templates
+cache_l1
+cache_size_mb
+target_objs_per_dir
+avg_obj_size_kb
+cache_l2 cache_l1
+config
+sites
+forward_relations
+only_direct
+refresh_patterns
+default_refresh_pattern
+main_config.template
+check
+/usr/sbin/squid3 -f -k parse
+status
+status squid3
+running
+start stop reload restart
+squid3
+s/files/check_squidpeers
+charm_dir
+/check_squidpeers
+squidpeers
+check squid peers
+check_squidpeers
+nagios_check_http_params
+squidrp
+check squid
+check_http %s
+services
+nrpe_check_path
+check_http -i 127.0.0.1 -p 3128 --method=head
+service_name
+x_balancer_name_allowed
+u http://localhost%s
+k \\
+u http://%s%s
+squid-%s
+check squid for site %s
+squid3 squidclient python-jinja2
+package_status
+s/files/default.squid3
+charm_dir /etc/default/squid3
+package_status
+check
+reload
+status
+restart
+start
+status
+stop
+joined changed broken departed
+joined changed
+enable_forward_proxy
+0.0.0.0
+localhost
+cached-website
+install
+config-changed
+start
+stop
+upgrade-charm
+website-relation-joined
+joined
+website-relation-changed
+changed
+website-relation-broken
+broken
+website-relation-departed
+departed
+cached-website-relation-joined
+joined
+cached-website-relation-changed
+changed
+cached-website-relation-broken
+broken
+cached-website-relation-departed
+departed
+nrpe-external-master-relation-joined
+local-monitors-relation-joined
+env-dump
+unknown hook
+hooks.py
+missing required hook name argument
+parent\s+:\s*(?p<name>\s+
+status\s+:\s*(?p<status>\s+
+up
+header
+header
+header gap
+header gap
+peer
+there are no neighbors installed
+expecting blank line after header?
+peer
+name name
+up status
+status status
+up
+squid has no configured peers
+all peers are up according to squid
+name status
+up
+the following peers are not up according to squid
+squidclient mgr:server_list
+error running squidclient: %s

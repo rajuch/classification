@@ -1,0 +1,87 @@
+gunicorn
+critical
+debug
+info
+error
+warning
+juju-log -l
+root root
+root root
+/usr/bin/install -o {} -g {} -m {} -d
+config-get
+format=json
+relation-get --format=json
+r
+r
+
+relation-set
+juju_relation_id
+relation-list --format=json -r
+db
+relation-ids --format=json
+relation-list --format=json -r
+list
+relation-id
+unit
+apt-get update
+apt-get -y install -qq
+pip install
+u
+svn+ git+
+hg+ bzr+
+e
+pip install
+u
+r
+tcp
+open-port %d/%s
+tcp
+close-port %d/%s
+root root
+a-za-z0-9
+
+
+/
+admin
+schema
+relation-get ip
+relation-get private-address
+unit-get private-address
+charm_dir
+templates
+charm_dir
+templates
+juju_relation_id
+juju_remote_unit /
+unit_name
+/etc/init/%s.conf
+working_dir
+working_dir
+project_name
+wsgi_ python_path listen_ip port
+wsgi_worker_class eventlet
+python-eventlet
+wsgi_worker_class gevent
+python-gevent
+wsgi_worker_class tornado
+python-tornado
+wsgi_workers
+python -c
+wsgi_workers
+wsgi_access_logfile
+wsgi_extra
+wsgi_extra
+access-logformat=%s wsgi_access_logfile
+access-logformat=  wsgi_access_logformat
+wsgi_wsgi_file wsgi_wsgi_file
+upstart.tmpl
+service %s restart || service %s start
+juju_remote_unit /
+service %s stop
+rm /etc/init/%s.conf
+juju_unit_name /
+install
+upgrade-charm
+wsgi-file-relation-joined wsgi-file-relation-changed
+wsgi-file-relation-broken
+unknown hook

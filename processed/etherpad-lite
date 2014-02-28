@@ -1,0 +1,41 @@
+nodejs
+curl
+bzr
+daemon
+abiword
+npm
+install_path
+application_name
+application_user
+application_url
+application_revision
+root root
+extra_archives
+add-apt-repository --yes
+apt-get update
+open-port 9001
+templates/settings.json.dirty {}/settings.json
+db/
+host
+user
+password
+database
+templates/settings.json.mysql {}/settings.json
+install
+force-yes
+bzr branch -r
+/apikey.txt
+/src/.ep_initialized
+/var
+db
+config-changed
+templates/etherpad-lite.conf /etc/init/etherpad-lite.conf
+upgrade-charm
+db-relation-joined
+db-relation-changed
+db-relation-broken
+pgsql-relation-joined
+pgsql-relation-changed
+pgsql-relation-broken
+website-relation-joined
+9001 unit-get private-address

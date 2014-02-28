@@ -1,0 +1,37 @@
+apt-get install -y libicu48 mumble-server python-zeroc-ice
+found existing %s %d
+adding at %s
+already removed
+no siblings, removing parent
+127.0.0.1
+meta:tcp -h %s -p %d -t 1000
+murmur.ice
+/etc/mumble-server.ini
+icesecretwrite
+import ice
+ice.implicitcontext shared
+trying to retrieve slice dynamically from server
+getslice
+ice
+i
+success
+failed
+path to slicefile
+load slice (%s
+i
+done
+import dynamically compiled murmur class
+establish ice connection
+protected
+secret
+creating callback stuff
+callback.client tcp -h %s -t 1000
+server %d started
+server %d stopped
+a server got stopped, getting its id failed. murmur shutdown?
+failed (wrong secret
+please edit mice.py to set the valid secret
+done
+murmur object accessible via   or
+error: invalid ice secret. mice won
+d booted servers in  ,   contains

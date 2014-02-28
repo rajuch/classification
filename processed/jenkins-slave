@@ -1,0 +1,2 @@
+apt-get -y install -qq jenkins-slave wget
+apt-get -y install -qq `config-get tools`

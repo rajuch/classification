@@ -1,0 +1,4 @@
+apt-get -qqy install $native_packages
+apt-get -qqy install mysql-client-core-5.5 debconf-utils
+debian_frontend=noninteractive apt-get -y install -qq mysql-server
+apt-get -qqy install $debian_packages

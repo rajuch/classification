@@ -1,0 +1,141 @@
+openstack-origin
+config-changed
+nova-common
+migration-auth-type ssh
+cloud-compute
+amqp-relation-joined
+rabbit-user
+rabbit-vhost
+amqp-relation-changed
+amqp
+quantum ovs
+neutron ovs
+shared-db-relation-joined
+database
+database-user
+private-address
+quantum neutron
+ovs
+neutron-database
+neutron-database-user
+private-address
+shared-db-relation-changed
+shared-db
+quantum neutron ovs
+config
+image-service-relation-changed
+image-service
+cloud-compute-relation-joined
+migration-auth-type
+migration_auth_type
+ssh
+ssh_public_key
+cloud-compute-relation-changed
+quantum neutron
+ovs
+shared-db
+ceph-relation-joined
+ceph-common
+ceph-relation-changed
+ceph
+virt-type kvm qemu lxc
+key
+amqp-relation-broken
+ceph-relation-broken
+image-service-relation-broken
+shared-db-relation-broken
+upgrade-charm
+amqp
+http://ubuntu-cloud.archive.canonical.com/ubuntu
+5edb1b62ec4926ea
+deb http://archive.ubuntu.com/ubuntu/ %s-proposed
+restricted main multiverse universe
+oneiric diablo
+precise essex
+quantal folsom
+raring grizzly
+saucy havana
+2011.2 diablo
+2012.1 essex
+2012.2 folsom
+2013.1 grizzly
+2013.2 havana
+2014.1 icehouse
+1.4.3 diablo
+1.4.8 essex
+1.7.4 folsom
+1.8.0 grizzly
+1.7.7 grizzly
+1.7.6 grizzly
+1.10.0 havana
+1.9.1 havana
+1.9.0 havana
+5g
+distrib_codename
+distro distro-proposed
+could not derive openstack release for
+this ubuntu release: %s
+cloud
+s- /
+deb ppa
+could not determine openstack codename for version %s
+could not derive openstack version for
+codename: %s
+could not determine version of package with no installation
+candidate: %s
+could not determine version of uninstalled package: %s
+swift
+could not determine openstack codename for version %s
+swift
+essex
+openstack-origin
+apt-key adv --keyserver keyserver.ubuntu.com
+recv-keys %s
+error importing repo key %s
+distro
+distro-proposed
+distrib_codename
+/etc/apt/sources.list.d/juju_deb.list w
+ppa
+add-apt-repository -y
+deb
+/etc/apt/sources.list.d/juju_deb.list w
+cloud
+distrib_codename
+cannot install from cloud archive pocket %s on this ubuntu
+version (%s
+staging
+ppa:ubuntu-cloud-archive/%s-staging
+add-apt-repository -y %s
+folsom precise-updates/folsom
+folsom/updates precise-updates/folsom
+folsom/proposed precise-proposed/folsom
+grizzly precise-updates/grizzly
+grizzly/updates precise-updates/grizzly
+grizzly/proposed precise-proposed/grizzly
+havana precise-updates/havana
+havana/updates precise-updates/havana
+havana/proposed precise-proposed/havana
+invalid cloud archive release specified: %s
+deb %s %s main
+ubuntu-cloud-keyring
+/etc/apt/sources.list.d/cloud-archive.list w
+invalid openstack-release specified: %s
+scripts/scriptrc
+s/%s
+wb
+#!/bin/bash\n
+export %s=%s\n
+script_path
+openstack-origin
+none none
+prepare_storage(): missing required input
+block_device=%s
+/dev/
+/dev/%s
+failed to locate valid block device at %s
+python-dnspython
+ptr
+python-dnspython
+charm_dir exec.d
+charm-pre-install

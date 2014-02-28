@@ -1,0 +1,60 @@
+apt-get -y install -- pgbouncer python-cheetah postgresql-client pwgen python-psycopg2
+config-get
+format=json
+juju-log
+relation-get --format=json
+r
+juju-log
+juju-log
+db-proxy backend-db-admin
+relation-ids --format=json
+relation-list --format=json -r
+relation-id
+name /
+juju-log
+error: no template provided
+j --json json
+json file to read in for template searchlist
+pgbouncer
+nagios
+127.0.0.1
+5434
+show lists
+\x00
+show config
+\x00 \x00
+show pools
+cl_active cl_waiting sv_active sv_idle sv_used
+sv_tested sv_login
+maxwait maxwait maxwait
+cl_waiting
+maxwait
+max seconds waiting for an available backend (maxwait): %d
+fyi number of clients waiting for a backend (cl_waiting): %d
+ok
+warning
+critical
+max_client_conn
+used_clients
+current connections: %s maximum connections: %s
+ok
+warning
+critical
+error: %s
+d --database database
+u --user user
+p --password password
+h --host host
+p --port port
+c --checkname checkname
+current and max client connections;
+max time in secs waited for clients until pgbouncer
+finds an available backend, also instant number of clients waiting is shown
+in the status message
+w --warnlevel warnlevel
+c --critlevel critlevel
+warnlevel, --critlevel and --checkname are required
+check_max_conns
+check_pool_wait
+invalid --checkname %s
+error: %s

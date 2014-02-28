@@ -1,0 +1,1 @@
+apt-get -y --force-yes install build-essential openbsd-inetd update-inetd tcpd
