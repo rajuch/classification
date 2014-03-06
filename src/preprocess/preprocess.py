@@ -17,7 +17,7 @@ stopwords = ['__main__', 'desc', 'true', 'false', 'service', 'type', 'none', 'to
              'has','changed', 'so', 'can', 'could', 'are', 'no', 'download', 'print', 'aptitude',
              'install', 'installed', 'installation', 'en', 'min', 'max', 'user', 'name', 'now',
              'unable', 'started', 'stopping', 'stopped', 'updating', 'updated', 'update',
-             'charm-helper-sh']
+             'charm-helper-sh', 'installing']
 
 shellProcessList = frozenset(['pip', 'apt-get', 'aptitude', 'easy_install', 'yum', 'apt_get'])
 INSTALL = '{0}install{0}'.format(' ')
