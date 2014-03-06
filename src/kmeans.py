@@ -60,7 +60,8 @@ def preapreData():
     """
     con = getDBConnection()
     rowCount =0
-    global repoLangMap    
+    global repoLangMap 
+    maxTfIdf = 0   
     for repoId in repoList:
         sql2 = 'select name, tf from keywords where doc_id= '+ str(repoId)
         #print sql2
@@ -73,10 +74,22 @@ def preapreData():
                 val=wordDFMap[word]
                 index = int(val.split(":")[0])
                 df = int(val.split(":")[1])
-                #print rowCount, index
-                S[rowCount, index] = tf * math.log(float(noOfRepos/df))
+                tfidf = tf * math.log(float(noOfRepos/df))
+                if 'master' in word or 'slave' in word:
+                    print 'cluster word::', word, 'tfidf::', tfidf, 'tf::', tf, 'repoId::', repoId
+                    tfidf = (tf * 10) * math.log(float(noOfRepos/df))
+                if 'ceph' in word:
+                    tfidf = 100
+                if 'cluster' in word:
+                    #print 'cluster word::', word, 'tfidf::', tfidf
+                    tfidf = (tf * 5) * math.log(float(noOfRepos/df))
+                
+                S[rowCount, index] = tfidf
+                if maxTfIdf < tfidf:
+                    maxTfIdf = tfidf    
            
         rowCount = rowCount + 1
+    print 'max tfidf', maxTfIdf
 
 def decodeClusterOutput(path,fileName):
     """
@@ -87,7 +100,7 @@ def decodeClusterOutput(path,fileName):
     a=np.fromfile(path+fileName,dtype=np.int64)
     count=0
     clusterMap ={}
-    f = open(path+'clusteroutput_100','w')
+    f = open(path+'clusteroutput3_100','w')
     for key in a:
         if key in clusterMap:
             indexes= clusterMap[key] 
@@ -110,8 +123,6 @@ def decodeClusterOutput(path,fileName):
         f.write('\n')
     f.close()
 
-
-    
 """
 variables declaration
 """
@@ -136,12 +147,12 @@ if __name__ == '__main__':
     t0 = time()
 
     path = '/home/raju/Work/classification/cluster/'
-    clusterCentroidsFile = 'clusetCentroidsbin'
-    clusterOutputFile = 'clusterutputbin'
+    clusterCentroidsFile = 'clusetCentroidsbin2'
+    clusterOutputFile = 'clusterutputbin2'
 
     # computing K-Means with K = 100 (100 clusters)
     print 'shape of array', S.get_shape()
-    centroids,_ = kmeans(S.toarray(),10, iter=50)
+    centroids,_ = kmeans(S.toarray(),2)
     np.ndarray.tofile(centroids,path+clusterCentroidsFile)
     print centroids
 
