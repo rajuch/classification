@@ -1,3 +1,0 @@
-apt-get install -y hbase dotdee
-$pig" = "true" ] && apt-get install -y pig ||
-apt-get -y install hbase-$1

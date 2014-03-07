@@ -1,3 +1,0 @@
-# i.e. apt-get install -y foo  or  bzr branch http://myserver/mycode /srv/webroot
-apt-get install -y apache2 php5 php5-mcrypt php5-gd php5-intl php-mdb2 php-auth php-net-smtp php-net-socket php-mail-mime php5-pspell libmagic1 php-auth-sasl libjs-jquery php5-mysql libapache2-mod-php5 charm-helper-sh mysql-client tinymce
-! `which pwgen` ]] && apt-get -y install pwgen

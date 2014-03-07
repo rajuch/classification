@@ -1,1 +1,0 @@
-apt-get install -y apache2 php5 mysql-client php5-mysql php5-mcrypt ttf-dejavu-core ucf debconf-utils

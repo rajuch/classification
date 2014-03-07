@@ -1,2 +1,0 @@
-apt-get -y install -qq git-core
-apt-get -y install -qq nodejs build-essential curl

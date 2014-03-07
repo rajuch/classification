@@ -1,1 +1,0 @@
-apt-get -y install unzip openjdk-7-jre-headless charm-tools charm-helper-sh

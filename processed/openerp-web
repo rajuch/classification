@@ -1,5 +1,0 @@
-apt-get -y install debconf debconf-utils bzr
-apt-get install -y python-werkzeug python-simplejson python-tz \
-apt-get install -y openerp-web apache2 --no-install-recommends
-apt-get install -y python-werkzeug python-simplejson python-tz \
-apt-get install -y openerp-web apache2 --no-install-recommends

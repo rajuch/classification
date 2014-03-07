@@ -1,2 +1,0 @@
-apt-get -y install libvirt-bin qemu-system qemu-user-static
-apt-get -y install bzr make

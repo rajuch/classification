@@ -1,1 +1,0 @@
-apt-get install -y $zk_package $base_packages

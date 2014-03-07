@@ -1,2 +1,0 @@
-apt-get install opscode-keyring $apt_flags 1>/dev/null
-apt-get install chef chef-server $apt_flags 1>/dev/null

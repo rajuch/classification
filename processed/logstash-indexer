@@ -1,1 +1,0 @@
-apt-get -y install openjdk-7-jre-headless curl redis-server

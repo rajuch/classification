@@ -1,3 +1,0 @@
-apt-get install -y hive dotdee
-apt-get -y install hive-$1
-apt-get -y install libmysql-java

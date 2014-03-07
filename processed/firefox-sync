@@ -1,2 +1,0 @@
-apt-get -y install \
-apt-get -y install postfix

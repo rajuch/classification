@@ -1,3 +1,0 @@
-# i.e. apt-get install -y foo  or  bzr branch http://myserver/mycode /srv/webroot
-apt-get install -y hadoop-0.20-namenode
-apt-get install -y hadoop-0.20-jobtracker

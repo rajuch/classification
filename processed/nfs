@@ -1,1 +1,0 @@
-debian_frontend=noninteractive apt-get -y install -qq nfs-kernel-server

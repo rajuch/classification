@@ -1,2 +1,0 @@
-apt-get -qqy install rpcbind nfs-common rsync
-apt-get install -qqy charm-helper-sh apache2 libapache2-mod-php5 \

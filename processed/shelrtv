@@ -1,1 +1,0 @@
-apt-get install -y make build-essential openjdk-6-jre libxml2-dev libxslt1-dev ruby1.9.1-full ruby-bundler git-core nodejs npm

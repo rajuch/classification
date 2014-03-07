@@ -1,6 +1,0 @@
-apt-get install -y curl build-essential
-add nodejs ppa
-add-apt-repository -y ppa:chris-lea/node.js
-apt-get update
-apt-get update
-nodejs

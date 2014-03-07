@@ -1,2 +1,0 @@
-debian_frontend=noninteractive apt-get -y install debconf-utils python-software-properties pwgen facter facter-customfacts-plugin curl
-debian_frontend=noninteractive apt-get -y install cloudfoundry-server

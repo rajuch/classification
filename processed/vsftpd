@@ -1,1 +1,0 @@
-debian_frontend=noninteractive apt-get -q -y install vsftpd libpam-pwdfile apache2-utils

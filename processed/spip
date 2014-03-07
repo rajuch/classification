@@ -1,3 +1,0 @@
-# i.e. apt-get install -y foo  or  bzr branch http://myserver/mycode /srv/webroot
-apt-get install -y zip nfs-common php5-mysql mysql-client libapache2-mod-php5
-apt-get install -y spip nfs-common

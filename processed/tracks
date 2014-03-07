@@ -1,1 +1,0 @@
-apt-get install -qqy unzip ruby-full build-essential libmysqlclient-dev \

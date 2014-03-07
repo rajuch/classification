@@ -1,1 +1,0 @@
-apt-get -y install apache2 php5-gd libapache2-mod-php5 php5-cgi mysql-client-core-5.5 php5-mysql python-mysqldb charm-helper-sh pwgen

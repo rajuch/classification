@@ -1,1 +1,0 @@
-apt-get -y install apache2 libapache2-mod-wsgi bzr make libpq-dev python-dev
