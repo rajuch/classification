@@ -7,14 +7,22 @@ import MySQLdb as mdb
 
 def executeSQL(con,sql):
     cursor = con.cursor()
-    cursor.execute(sql)    
+    cursor.execute(sql)
+    con.commit()    
     return cursor.fetchall()
+
+def getDBConnection():
+    user = "root"
+    password = "root"
+    databaseName = "cluster"
+    conn = mdb.connect('localhost', user, password, databaseName)
+    return conn
 
 def calculateTFIDF():
     """
     calculates the term frequency- inverse document frequency and stores in the table
     """
-    cursor = conn.cursor()
+    conn = getDBConnection()
     sql = "select word from clean_keywords"
     print sql
     rows = executeSQL(conn, sql)
@@ -42,16 +50,13 @@ def calculateTFIDF():
     for key in wordDFMap.keys():
         sql = 'update clean_keywords set df='+str(wordDFMap[key]) + " where word='"+key+"'"
         print sql
-        cursor.execute(sql)
-        conn.commit() 
+        executeSQL(conn, sql) 
         
     for key in wordTFMap.keys():
         row=key.split(":")
         sql = 'update keywords set tf='+str(wordTFMap[key])+" where name='"+row[0]+"' and doc_id="+str(row[1])
         print sql
-        cursor.execute(sql)
-        conn.commit()  
+        executeSQL(conn, sql) 
 
 if __name__ == '__main__':
-    conn =mdb.connect(host="localhost", user="root", passwd="root", db="cluster1")
     calculateTFIDF()
